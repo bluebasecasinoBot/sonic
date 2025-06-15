@@ -90,7 +90,7 @@ __SYD.p7_text2 = () =>{
     return __c(
         "div",
         {
-            style:SYD_VAR.page2Text2.get() + "color:#0050d4;text-decoration:underline;"
+            style:SYD_VAR.page2Text2.get() + "color:#0050d4;text-decoration:underline;text-align:center;"
         },
         [
             __c(
