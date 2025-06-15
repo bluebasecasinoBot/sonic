@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+@font-face {
+    font-family: font1;
+    src: url(./assets/SpeedBeast\ FREE.ttf);
+}
+@font-face
+{
+    font-family: font2;
+    src:url(./assets/Poppins-Regular.ttf)
+}
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 80%;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track
+{
+    background:rgb(24, 24, 24);
+}
+p::-webkit-scrollbar-track
+{
+    background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color:#0050d4;
+    width: 3px;
+    border-radius: 20px;
+}
+::-webkit-scrollbar:hover ::-webkit-scrollbar-thumb{
+  width: 3px;
+}
+
+.p2_tab
+{
+    position: relative;
+}
+.p2_tab::before{
+    position: absolute;
+    content:"";
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:85%;
+    height:8px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background:#8A63F7;
+}
+.p2_tab::after{
+    position: absolute;
+    content:"";
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:85%;
+    height:8px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background:#8A63F7;
+}
+.buy_tabs
+{
+    transition: all linear .3s;
+    perspective: 900px;
+}
+.buy_tabs:hover{
+    box-shadow: 0 15px 40px 0 rgba(0,0,0,.21);
+    transform: translateY(-5px);
+}
+.buy_tabs img{
+    transition: transform ease-in .3s;
+}
+.buy_tabs:hover img
+{
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+.p3_tab
+{
+    position: relative;
+    isolation: isolate;
+}
+.p3_tab::before
+{
+    z-index: -1;
+    content:"";
+    position: absolute;
+    bottom:-10px;
+    height:100px;
+    width:230px;
+    background:#8A63F7;
+    border-radius: 5%;
+}
+.p4_tab
+{
+    box-shadow: 6px 6px 0px -3px #000;
+}
+.p5_tab_knob::after
+{
+    content: "";
+    position: absolute;
+    height:75%;
+    width:75%;
+    border:2px solid #fff;
+    border-radius: inherit;
+    transform: translateX(0%);
+}
+
+.p5_tab_knob::before
+{
+    content: "";
+    position: absolute;
+    height:75%;
+    width:75%;
+    border:2px solid #0B0A1D;
+    border-radius: inherit;
+    transform: translateX(25%);
+}
+
+nav a{
+    color: #fff;
+}
+
+.clickButton
+{
+    background: linear-gradient(145deg, #ffd700, #ffa500);
+    color: #202020;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px #ffd700, inset 0 0 5px #fff7aa;
+    font-weight: bold;
+    /* animation: sonicTrail 1.2s infinite; */
+}
+.clickButton:hover{
+    box-shadow: 0 0 15px #ffcc00, 0 0 20px #ffcc00aa;
+    transform: scale(1.08) rotate(-1deg);
+}
+
+@keyframes sonicTrail {
+  0%, 100% {
+    box-shadow: 0 0 8px #00e0ff;
+  }
+  50% {
+    box-shadow: 0 0 18px #00e0ff99;
+  }
+}
+
+.floatMainPic
+{
+    animation-name: mainBg_float;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes mainBg_float
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    25%
+    {
+        transform: translateY(15px);
+    }
+    50%
+    {
+        transform: translateY(0px);
+    }
+    75%
+    {
+        transform: translateY(-15px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+/*NEWLY ADDED STYLES*/
+
+@keyframes floatAndSpin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(6px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+.float-rotate-hover {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.float-rotate-hover:hover {
+  animation: floatAndSpin 2s ease-in-out infinite;
+}
+
+
+.ring-wrapper , .ring-wrapper-portal {
+  position: relative;
+  /* background:red; */
+  /* background-image: url('./assets/sonic_page1_img__.png');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat; */
+  border-radius: 50%;
+  isolation: isolate;
+}
+
+/* Common Ring Style */
+.ring-wrapper::before,
+.ring-wrapper::after,
+.ring-wrapper-portal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 30% 30%, 
+                rgba(255, 255, 255, 0.8) 0%,
+                rgba(255, 255, 210, 0.9) 10%,
+                rgba(255, 215, 0, 0.95) 30%, 
+                rgba(218, 165, 32, 0.9) 50%,
+                rgba(184, 134, 11, 0.9) 70%,
+                rgba(153, 101, 21, 0.8) 90%);
+    box-shadow:
+        0 0 15px rgba(255, 215, 0, 0.8),
+        inset 0 0 10px rgba(255, 255, 210, 0.9),
+        inset 0 0 20px rgba(255, 215, 0, 0.7),
+        0 0 30px rgba(255, 165, 0, 0.6),
+        0 0 50px rgba(204, 132, 0, 0.4);
+    mask: radial-gradient(circle at center, transparent 65%, black 66%);
+    -webkit-mask: radial-gradient(circle at center, transparent 60%, black 61%);
+    /* z-index: -1; */
+    transform: rotateZ(-15deg);
+}
+
+/* First ring animation */
+.ring-wrapper::before {
+  animation: orbitClockwise__base 7s linear infinite alternate-reverse;
+  transform-origin: center center;
+}
+
+/* Second ring animation, rotated and opposite direction */
+.ring-wrapper::after , .ring-wrapper-portal::after {
+  transform: scale(0.95);
+  animation: orbitCounter__base 5s linear infinite alternate-reverse;
+  transform-origin: center center;
+  opacity: 0.9;
+}
+
+.ring-wrapper:hover.ring-wrapper::after
+{
+    animation: orbitCounter 5s linear infinite alternate-reverse;
+}
+
+.ring-wrapper:hover.ring-wrapper::before
+{
+    animation: orbitClockwise 7s linear infinite alternate-reverse;
+}
+
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0) scale(1.1) translateZ(30px);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1) translateZ(30px);
+  }
+}
+
+
+/* Keyframes for orbiting rings Hover*/
+@keyframes orbitClockwise {
+    from{ transform: rotate(0deg) rotateX(0deg) rotateY(0deg) translateX(0); }
+    50%{z-index: -1;}
+    70%{z-index: 1;}
+    to{ transform: rotate(360deg) rotateX(270deg) rotateY(180deg) translateX(0); }
+}
+
+@keyframes orbitCounter {
+    from{ transform: rotate(0deg) rotateX(0deg) rotateY(0deg) scale(0.95); }
+    30%{z-index: -1;}
+    50%{z-index: 1;}
+    to{ transform: rotate(-360deg) rotateX(-270deg) rotateY(-180deg) scale(1); }
+}
+
+/* Keyframes for orbiting rings */
+@keyframes orbitClockwise__base {
+    from{ transform: rotate(0deg) rotate(0deg);}
+    to{ transform: rotate(360deg) rotate(360deg);}
+}
+
+@keyframes orbitCounter__base {
+    from{ transform: rotate(0deg) scale(1); }
+    to{ transform: rotate(-360deg) scale(1); }
+}
+
+
+.goldenRing__portal__elem::after
+{
+    content: "";
+    height: 100%;
+    width:100%;
+    background-image: url(./assets/sonic_portal.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;
+}
+
+/*NEWLY ADDED STYLES*/
+
+
+.p1SubHeader
+{
+    flex-direction: row;
+    padding:60px;
+}
+
+.p1SubHeader_image_cont
+{
+    width:50%;
+}
+
+@media screen and (max-width:500px)
+{
+    .p1SubHeader
+    {
+        padding:10px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .p1SubHeader
+    {
+        flex-direction: column;
+    }
+
+    .p1SubHeader_text_cont
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    .p1SubHeader_image_cont
+    {
+        width: 100%;
+    }
+}
