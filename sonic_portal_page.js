@@ -115,26 +115,63 @@ __SYD.p_portal_sonic_text3 = () =>{
     return __c(
         "div",
         {
-            style:SYD_VAR.page2Text3.get() + "display:flex;flex-direction:column;gap:15px;color:#ffffff;text-shadow:1px 1px 0px #171717;padding:10px;"
+            style:SYD_VAR.page2Text3.get() + "display:flex;flex-direction:column;gap:10px;color:#ffffff;text-shadow:1px 1px 0px #171717;padding:10px;"
         },
         [
             __c(
                 "p",
-                {style:"font-family:font2;font-size:16px;"},["🏁 Getting $SONIC Is Easy — Here's How:"]
+                {style:"font-family:font2;font-size:18px;font-weight:900;"},["🏁 Getting $SONIC Is Easy — Here's How:"]
             ),
             __c(
                 "ul",
                 {
-                    style:"display:flex;flex-direction:column;gap:10px;font-size:14px;"
+                    style:"display:flex;flex-direction:column;gap:5px;font-size:14px;margin-top:5px;"
                 },
                 [
-                    __c("li",{style:""} , ["Some text here"]),
-                    __c("li",{style:""} , ["Some text here"]),
-                    __c("li",{style:""} , ["Some text here"]),
-                    __c("li",{style:""} , ["Some text here"]),
-                    __c("li",{style:""} , ["Some text here"]),
+                    __c("p" , {style:"font-size:17px;font-weight:900;text-decoration:underline;"},["Get a Wallet"]),
+                    __c("li",{style:"margin-left:30px;"} , ["Use a wallet like MetaMask or Coinbase Wallet, and make sure it supports the Base chain."]),
                 ]
-            )
+            ),
+            __c(
+                "ul",
+                {
+                    style:"display:flex;flex-direction:column;gap:5px;font-size:14px;margin-top:5px;"
+                },
+                [
+                    __c("p" , {style:"font-size:17px;font-weight:900;text-decoration:underline;"},["Add Base Network"]),
+                    __c("li",{style:"margin-left:30px;"} , ["If you're not on Base yet, add it manually or connect via Chainlist."]),
+                ]
+            ),
+            __c(
+                "ul",
+                {
+                    style:"display:flex;flex-direction:column;gap:5px;font-size:14px;margin-top:5px;"
+                },
+                [
+                    __c("p" , {style:"font-size:17px;font-weight:900;text-decoration:underline;"},["Bridge Funds to Base"]),
+                    __c("li",{style:"margin-left:30px;"} , ["Use the official Base Bridge to transfer ETH from Ethereum to Base."]),
+                ]
+            ),
+            __c(
+                "ul",
+                {
+                    style:"display:flex;flex-direction:column;gap:5px;font-size:14px;margin-top:5px;"
+                },
+                [
+                    __c("p" , {style:"font-size:17px;font-weight:900;text-decoration:underline;"},["Swap for $SONIC"]),
+                    __c("li",{style:"margin-left:30px;"} , ["Head to a Base-supported DEX like Uniswap or Aerodrome, paste the $SONIC contract address, and swap ETH for $SONIC."]),
+                ]
+            ),
+            __c(
+                "ul",
+                {
+                    style:"display:flex;flex-direction:column;gap:5px;font-size:14px;margin-top:5px;"
+                },
+                [
+                    __c("p" , {style:"font-size:17px;font-weight:900;text-decoration:underline;"},["Speed Ahead"]),
+                    __c("li",{style:"margin-left:30px;"} , ["HODL, stake, or trade. You’re now part of the Blue Blur gang."]),
+                ]
+            ),
         ]
     )
 }

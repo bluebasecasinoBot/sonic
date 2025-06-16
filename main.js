@@ -11,6 +11,7 @@ import "./page7.js"
 import "./footer.js"
 import "./variable.js"
 import "./sonic_portal_page.js"
+import "./sonic_game_page.js"
 
 // Additional assets
 import "./sonic_program_assets.js"
@@ -46,6 +47,7 @@ __SYD.sub_container = () =>{
             __SYD.p2(),
             __SYD.p3(),
             __SYD.p_portal_sonic(),
+            __SYD.p_game_sonic(),
             // __SYD.p4(),
             // __SYD.p5(),
             // __SYD.p6(),

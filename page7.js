@@ -153,6 +153,11 @@ __SYD.faqsQuestionaire = () =>{
                 question:"Is there a max supply?",
                 answer:"Yes — $SONIC has a hard-capped supply. No hidden mints, no stealth inflation. What you see is what you get.",
                 index:4
+            }),
+            __SYD.questionTab({
+                question:`Will "Sonic Rush: Basebreaker" be play-to-earn (P2E)?`,
+                answer:"Yes! The game will feature play-to-earn mechanics powered by $SONIC. Race, collect rings, complete missions, and compete on leaderboards to earn token rewards and exclusive NFT badges. The faster you go, the more you gain — just like the blue blur himself.",
+                index:5
             })
 
         ],

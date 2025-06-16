@@ -55,10 +55,11 @@ __SYD.goldenRing = () =>{
 
 __SYD.goldenRings_container__portal = () =>{
     return __c(
-        "div",
+        "a",
         {
             style:`height:100vw;max-height:calc(100vh - 150px);display:flex;flex-direction:column;gap:20px;justify-content:center;align-items:center;perspective:900px;`,
-            class:"p1SubHeader_image_cont"
+            class:"p1SubHeader_image_cont",
+            href:"#"
         },
         [
             __SYD.goldenRing__portal()
