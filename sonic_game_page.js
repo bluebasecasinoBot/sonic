@@ -35,7 +35,7 @@ __SYD.p_game_sonicSubHeader = () =>{
             __c(
                 "div",
                 {
-                    style:`height:100vw;max-height:calc(100vh - 150px);width:${__p(["p2SubHeader" , "breakVal"],false) ? "100%" : "50%"};display:flex;flex-direction:column;gap:20px;background-image:url("./assets/game_poster.png");border-radius:15px;`
+                    style:`height:100vw;max-height:calc(100vh - 150px);width:${__p(["p_game_sonicSubHeader" , "breakVal"],false) ? "100%" : "50%"};display:flex;flex-direction:column;gap:20px;background-image:url("./assets/game_poster.png");border-radius:15px;`
                 },[],{genericStyle:["bg_cover"]}
             ),
         ],
